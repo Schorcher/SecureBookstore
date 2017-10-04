@@ -13,6 +13,7 @@ $page_title = 'Browse';
 
 include('libs/setup.php');
 
+
 include(D_TEMPLATE . '/header.php');
 ?>
 

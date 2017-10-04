@@ -44,6 +44,9 @@
         </ul>
 
         <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <button id="btn-cart" class="btn btn-default nav-link"><i class="fa fa-shopping-cart"></i></button>
+            </li>
             <?php
             if (isLoggedIn()) {
 
@@ -52,10 +55,6 @@
                     echo '<buton id="btn-debug" class="btn btn-default nav-link"><i class="fa fa-bug"></i></buton>';
                     echo '</li>';
                 }
-
-                echo '<li class="nav-item">';
-                echo '<buton id="btn-debug" class="btn btn-default nav-link"><i class="fa fa-cart"></i></buton>';
-                echo '</li>';
 
                 echo '<li class="nav-item dropdown">';
                 echo '<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="dropdown01"
