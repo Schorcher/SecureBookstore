@@ -43,14 +43,14 @@
             <div class="card">
                 <div class="row ">
                     <div class="col-md-4">
-                        <img src="http://via.placeholder.com/339x452" class="img-fluid w-100">
+                        <img src="/images/Heather.jpg" class="img-fluid w-100">
                     </div>
                     <div class="col-md-8 px-3">
                         <div class="card-block px-3">
                             <h4 class="card-title">Heather Rego</h4>
                             <h6 class="card-title"></h6>
                             <p class="card-text">TODO: </p>
-                            <a href="#" class="btn btn-primary">Contact Me</a>
+                            <a href="mailto:hrego@students.kennesaw.edu" class="btn btn-primary">Contact Me</a>
                         </div>
                     </div>
                 </div>
