@@ -38,6 +38,9 @@
         <br/>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+        <a href="/register.php" class="">Or click here to register</a>
     </form>
+
 
 </div>

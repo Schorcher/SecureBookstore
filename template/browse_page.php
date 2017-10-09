@@ -85,7 +85,4 @@ if (isset($_GET['book'])) {
     </div>
     <?php
 }
-
-
 ?>
-
