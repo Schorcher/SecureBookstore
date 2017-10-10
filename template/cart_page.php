@@ -25,7 +25,7 @@
     global $DB;
     $q = $DB->prepare('SELECT * FROM carts WHERE user_id = :user_id;');
     $q->bindParam(':user_id', $user['id'], PDO::PARAM_INT);
-$q->execute();
+    $q->execute();
 
     while ($r = $q->fetch()) {
         $q2 = $DB->prepare('SELECT * FROM books WHERE id = :id;');
@@ -34,7 +34,6 @@ $q->execute();
         $r2 = $q2->fetch();
         ?>
 
-
         <section>
             <div class="container py-3">
                 <div class="card">
@@ -42,19 +41,21 @@ $q->execute();
                         <div class="col-md-4">
                             <img src="/images/books/<?php echo $r2['isbn']; ?>.jpg" class="img-fluid w-25">
                         </div>
-                        <div class="col-md-8 px-3">
+                        <div class="col-md-6 px-3">
                             <div class="card-block px-3">
-
                                 <h6 class="card-title"> <?php echo $r2['title']; ?></h6>
-                                <p class="card-text"> This item is currently in your shopping cart. </p>
-                                <a href=" " class="btn btn-primary">Remove</a>
+                                <p class="card-text"> Quantity: <?php echo $r['count']; ?> </p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 px-3">
+                            <div class="card-block px-3">
+                                <a href="#" class="btn btn-primary">Remove</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
     <?php }
 
