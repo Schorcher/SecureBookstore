@@ -40,6 +40,30 @@ if (isset($_GET['book'])) {
                 <p class="lead text-muted">ISBN: <?php echo $r['isbn']; ?></p>
                 <p class="lead text-muted">Course: <?php echo $r['course']; ?></p>
                 <p class="lead text-muted">Professor: <?php echo $r['professor']; ?></p>
+
+                <br/>
+
+                <?php if (isLoggedIn()) {
+                    ?>
+
+                    <form action="browse.php" method="post" role="form" class="form-control">
+                        <input type="hidden" id="isbnInput" name="isbnInput" value="<?php echo $r['isbn']; ?>">
+                        <input type="hidden" id="idInput" name="idInput" value="<?php echo $r['id']; ?>">
+                        <label for="quantityInput" class="sr-only">Quantity</label>
+                        <input type="number" id="quantityInput" name="quantityInput" class="form-control" min="1"
+                               max="99">
+
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Add to Cart</button>
+                    </form>
+
+
+                <?php } else {
+                    ?>
+
+                    <p class="lead text-muted">Please sign in to add this to the cart</p>
+
+                <?php } ?>
+
             </div>
         </div>
         <div class="row">

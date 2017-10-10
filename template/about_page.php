@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-md-8 px-3">
                         <div class="card-block px-3">
-                            <h4 class="card-title">Alexis ??</h4>
+                            <h4 class="card-title">Alexia Allaway</h4>
                             <h6 class="card-title"></h6>
                             <p class="card-text">TODO: </p>
                             <a href="#" class="btn btn-primary">Contact Me</a>
