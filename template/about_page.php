@@ -69,7 +69,7 @@
                         <div class="card-block px-3">
                             <h4 class="card-title">Chris Hemlet</h4>
                             <h6 class="card-title"></h6>
-                            <p class="card-text">TODO: </p>
+                            <p class="card-text">Chris is a Senior in Computer Science at Kennesaw State University. He enjoys programming and road trips. </p>
                             <a href="mailto:chamlet3@students.kennesaw.edu" class="btn btn-primary">Contact Me</a>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         <div class="card-block px-3">
                             <h4 class="card-title">Alexia Allaway</h4>
                             <h6 class="card-title"></h6>
-                            <p class="card-text">TODO: </p>
+                            <p class="card-text">Alexia is a Senior in Computer Science at Kennesaw State University. She enjoys programming and yoga. </p>
                             <a href="#" class="btn btn-primary">Contact Me</a>
                         </div>
                     </div>
