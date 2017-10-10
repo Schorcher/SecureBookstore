@@ -43,6 +43,10 @@ if (isset($_GET['book'])) {
 
                 <br/>
 
+                <p class="lead text-muted">Price: $<?php echo $r['new_price']; ?></p>
+
+                <br/>
+
                 <?php if (isLoggedIn()) {
                     ?>
 
