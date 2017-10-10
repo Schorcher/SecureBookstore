@@ -23,5 +23,6 @@ if ($_POST) {
         $_SESSION['billingCountry'] = $_POST['billingCountry'];
         $_SESSION['billingZip'] = $_POST['billingZip'];
     }
+    header("Location:checkout4.php");
 }
 ?>

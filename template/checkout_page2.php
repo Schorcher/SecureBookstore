@@ -24,6 +24,12 @@
 
         </div>
         <div class="form-group form-inline">
+            <label for="exp" class="col-sm-4">Expiration</label>
+            <div class="col-sm-8">
+                <input type="date" class="form-control" id="exp" name="exp" required />
+            </div>
+        </div>
+        <div class="form-group form-inline">
             <label for="CVC" class="col-sm-4">3-digit Security Code</label>
             <div class="col-sm-8">
                 <input type="number" class="form-control" id="CVC" name="CVC" minlength="3" maxlength="3" required />
