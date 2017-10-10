@@ -8,7 +8,10 @@
 
 if ($_POST) {
     $_SESSION['shippingAddress1'] = $_POST['shippingAddress1'];
-    $_SESSION['shippingAddress2'] = $_POST['shippingAddress2'];
+    if (empty($_POST['shippingAddress2']))
+        $_SESSION['shippingAddress2'] = "";
+    else
+        $_SESSION['shippingAddress2'] = $_POST['shippingAddress2'];
     $_SESSION['shippingCity'] = $_POST['shippingCity'];
     $_SESSION['shippingState'] = $_POST['shippingState'];
     $_SESSION['shippingCountry'] = $_POST['shippingCountry'];
