@@ -31,7 +31,7 @@ if ($_POST) {
     $query->bindParam(':date_created', $dateCreated, PDO::PARAM_STR);
     $query->execute();
 
-    header('Location: index.php');
+    header('Location: cart.php');
 }
 
 

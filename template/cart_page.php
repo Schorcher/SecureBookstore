@@ -17,47 +17,47 @@
     </div>
 </section>
 
-
-<?php
-
-{
-
-$q = $DB->prepare('SELECT * FROM carts WHERE user_id=user_id;');
-$q->bindParam(':user_id', $_GET['book'], PDO::PARAM_STR);
-$q->execute();
-$r = $q->fetch();
-?>
-
-
 <div class="container">
-    <section>
-        <div class="container py-3">
-            <div class="card">
-                <div class="row ">
-                    <div class="col-md-4">
-                        <img src="/images/books/ <?php echo $r['isbn']; ?>.jpg" class="img-fluid w-100">
-                    </div>
-                    <div class="col-md-8 px-3">
-                        <div class="card-block px-3">
+
+    <?php
 
 
-                            <?php
-                            while ($r = $q->fetch()) {
-                                echo '<p class="card-title">' . $r['title'] . '</p>';
-                            }
-                            ?>
+    global $DB;
+    $q = $DB->prepare('SELECT * FROM carts WHERE user_id = :user_id;');
+    $q->bindParam(':user_id', $user['id'], PDO::PARAM_INT);
+$q->execute();
 
-                            <h6 class="card-title"></h6>
-                            <p class="card-text"> This item is currently in your shopping cart. </p>
-                            <a href=" " class="btn btn-primary">Remove</a>
+    while ($r = $q->fetch()) {
+        $q2 = $DB->prepare('SELECT * FROM books WHERE id = :id;');
+        $q2->bindParam(':id', $r['book_id'], PDO::PARAM_INT);
+        $q2->execute();
+        $r2 = $q2->fetch();
+        ?>
+
+
+        <section>
+            <div class="container py-3">
+                <div class="card">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <img src="/images/books/<?php echo $r2['isbn']; ?>.jpg" class="img-fluid w-25">
+                        </div>
+                        <div class="col-md-8 px-3">
+                            <div class="card-block px-3">
+
+                                <h6 class="card-title"> <?php echo $r2['title']; ?></h6>
+                                <p class="card-text"> This item is currently in your shopping cart. </p>
+                                <a href=" " class="btn btn-primary">Remove</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <?php
-    }
+
+    <?php }
 
     ?>
+
+</div>
