@@ -16,28 +16,57 @@
 <div class="container">
 
     <form class="form-signin" action="checkout3.php" method="post" role="form">
-        <input type="checkbox" class="form-control" id="isShippingAddress" name="isShippingAddress" value="sameAddress" />
-        <label for="isShippingAddress" class="sr-only">Same as billing address?</label>
+        <div class="form-group form-inline">
+                <input type="checkbox" class="form-control" id="isShippingAddress" name="isShippingAddress" value="sameAddress" />
 
-        <label for="billingAddress1" class="sr-only">Address 1</label>
-        <input type="text" id="billingAddress1" class="form-control" name="billingAddress1" required autofocus />
-        <label for="billingAddress2" class="sr-only">Address 2</label>
-        <input type="text" id="billingAddress2" class="form-control" name="billingAddress2" />
-        <label for="billingCity" class="sr-only">City</label>
-        <input type="text" id="billingCity" class="form-control" name="billingCity" required />
-        <label for="billingState" class="sr-only">State</label>
-        <select id="billingState" name="billingState" class="form-control" required >
-            <?php include("city_list.php") ?>
-        </select>
-        <label for="billingCountry" class="sr-only">Country</label>
-        <select id="billingCountry" name="billingCountry" class="form-control" required >
-            <?php include("country_list.php") ?>
-        </select>
-        <label for="billingZip" class="sr-only">Zipcode</label>
-        <input type="number" id="billingZip" name="billingZip" class="form-control" minlength="5" maxlength="9" required />
+            <label for="isShippingAddress" class="col-form-label">Same as billing address?</label>
+        </div>
 
-        <input type="button" class="form-control" value="Previous" onclick="document.location.href='checkout2.php'"/>
-        <input type="submit" value="Next" />
+        <div class="form-group form-inline">
+            <label for="billingAddress1" class="col-form-label col-sm-4">Address 1</label>
+            <div class="col-sm-8">
+                <input type="text" id="billingAddress1" class="form-control" name="billingAddress1" required autofocus />
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <label for="billingAddress2" class="col-form-label col-sm-4">Address 2</label>
+            <div class="col-sm-8">
+                <input type="text" id="billingAddress2" class="form-control" name="billingAddress2" />
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <label for="billingCity" class="col-form-label col-sm-4">City</label>
+            <div class="col-sm-8">
+                <input type="text" id="billingCity" class="form-control" name="billingCity" required />
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <label for="billingState" class="col-form-label col-sm-4">State</label>
+            <div class="col-sm-8">
+                <select id="billingState" name="billingState" class="form-control" required >
+                    <?php include("city_list.php") ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <label for="billingCountry" class="col-form-label col-sm-4">Country</label>
+            <div class="col-sm-8">
+                <select id="billingCountry" name="billingCountry" class="form-control" required >
+                    <?php include("country_list.php") ?>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <label for="billingZip" class="col-form-label col-sm-4">Zipcode</label>
+            <div class="col-sm-8">
+                <input type="number" id="billingZip" name="billingZip" class="form-control" minlength="5" maxlength="9" required />
+            </div>
+        </div>
+
+        <div class="form-group form-inline">
+            <input type="button" class="btn btn-primary btn-sm" value="Previous" onclick="document.location.href='checkout2.php'"/>
+            <input type="submit" value="Next" class="btn btn-primary btn-sm float-right" />
+        </div>
         <script>
             $(document).ready(function(){
                 $('#isShippingAddress').click(function(){
