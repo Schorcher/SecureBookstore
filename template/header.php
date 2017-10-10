@@ -44,9 +44,10 @@
         </ul>
 
         <ul class="nav navbar-nav">
-            <li class="nav-item <?php if ($page_title == 'Shopping Cart') {echo 'active';} ?>"><a class="nav-link" href="/cart.php">Shopping Cart</a>
+            <li class="nav-item">
+                <button id="btn-cart" class="btn btn-default nav-link" onclick="window.location.href='/cart.php'"><i
+                            class="fa fa-shopping-cart"></i></button>
             </li>
-
             <?php
             if (isLoggedIn()) {
 
