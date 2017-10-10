@@ -14,6 +14,8 @@ $page_title = 'Shopping Cart';
 
 include('libs/setup.php');
 
+$cartSubtotal = 0;
+
 
 include(D_TEMPLATE . '/header.php');
 ?>
