@@ -84,4 +84,12 @@
         </div>
     </section>
 
+    <?php
+
+    $cartGrandTotal = $cartTax + $cartSubtotal;
+
+    $_SESSION['cartGrandTotal'] = $cartGrandTotal;
+
+    ?>
+
 </div>
