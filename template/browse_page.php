@@ -53,7 +53,7 @@ if (isset($_GET['book'])) {
                         <input type="number" id="quantityInput" name="quantityInput" class="form-control" min="1"
                                max="99">
 
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Add to Cart</button>
+                        <button class="btn btn-lg btn-primary btn-block" href="/cart.php" type="submit">Add to Cart</button>
                     </form>
 
 
@@ -96,6 +96,7 @@ if (isset($_GET['book'])) {
                 <?php
                 $q = $DB->query('SELECT * FROM books;');
                 while ($r = $q->fetch()) {
+
                     echo '<div class="card">';
                     echo '<a href="/browse.php?book=' . $r['isbn'] . '">';
                     echo '<img src="/images/books/' . $r['isbn'] . '.jpg" alt="" class="img-fluid">';
