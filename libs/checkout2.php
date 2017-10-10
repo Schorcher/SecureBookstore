@@ -8,6 +8,7 @@
 
 if ($_POST) {
     $_SESSION['cardNumber'] = $_POST['cardNumber'];
+    $_SESSION['exp'] = $_POST['exp'];
     $_SESSION['CVC'] = $_POST['CVC'];
     header("Location:checkout3.php");
 }
